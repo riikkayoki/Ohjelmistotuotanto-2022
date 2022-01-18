@@ -1,1 +1,3 @@
-# Ohjelmistotuotanto-2022
+# Ohjelmistotuotanto 2022 - Viikko 1
+
+![GitHub Actions](https://github.com/riikkayoki/ohtu-2022-viikko1/workflows/CI/badge.svg)
