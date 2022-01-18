@@ -19,11 +19,18 @@ class TestStatistics(unittest.TestCase):
             PlayerReaderStub()
         )
 
-    def test_search_name_none(self):
-        self.assertEqual(self.statistics.search("Semenko"), None)
-
-    def test_search_name_team(self):
-        pass
-
     def test_number_of_players_team(self):
         self.assertEqual(len(self.statistics.team("EDM")), 3)
+
+    def test_search_name_none(self):
+        self.assertEqual(str(self.statistics.search("Semi")), "None")
+    
+    def test_searc_name(self):
+        self.assertEqual(str(self.statistics.search("Semenko")), "Semenko EDM 4 + 12 = 16")
+
+    def test_search_team(self):
+        self.assertEqual(str(self.statistics.team('EDM')[0]),'Semenko EDM 4 + 12 = 16')
+
+    def test_search_top_player(self):
+        self.assertEqual(str(self.statistics.top_scorers(1)[0]), 'Gretzky EDM 35 + 89 = 124')
+
