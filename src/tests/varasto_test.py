@@ -57,4 +57,5 @@ class TestVarasto(unittest.TestCase):
         self.assertAlmostEqual(maara, self.varasto.saldo)
 
     def test_str(self):
-        self.assertEqual(self.varasto.__str__(), f"saldo = {self.varasto.saldo}, vielä tilaa {self.varasto.paljonko_mahtuu()}")
+        self.assertEqual(self.varasto.__str__(
+        ), f"saldo = {self.varasto.saldo}, vielä tilaa {self.varasto.paljonko_mahtuu()}")
